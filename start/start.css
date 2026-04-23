@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color_fondo: #6dbf4b; /* verde suave */
+    --color-morado: #b04bc6;
+    --color_principal: #2F4F4F; /* verde oscuro elegante */
+    --color_secundario: #ffffff; /* blanco */
+    --color_boton: #4CAF50; /* verde vibrante */
+    --color_boton_hover: #45a049;
+    --fuente_principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fuente_principal);
+    background: linear-gradient(
+    to bottom,
+    var(--color_fondo),
+    var(--color-morado)
+  );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Pagina_inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--color_secundario);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    max-width: 600px;
+}
+
+.Pagina_inicio__bienvenida {
+    color: var(--color_principal);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.Pagina_inicio__logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.Pagina_inicio__ingreso {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.Pagina_inicio__texto {
+    font-size: 1.2rem;
+    color: var(--color_principal);
+    margin-bottom: 10px;
+}
+
+.Pagina_inicio__boton {
+    background-color: var(--color_boton);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Pagina_inicio__boton .Pagina_inicio__enlace{
+    text-decoration: none;
+    color: var(--color_secundario);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.Pagina_inicio__boton:hover {
+    background-color: var(--color_boton_hover);
+}
