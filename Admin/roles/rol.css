@@ -1,0 +1,133 @@
+:root {
+    --brand-green: #28a745;       /* Fondo principal */
+    --action-green: #1d9b3e;      /* Botón aceptar */
+    --action-red: #ff0000;        /* Botón negar */
+    --text-dark: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    padding: 20px;
+}
+
+/* Bloque Principal */
+.role-manager {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+.role-manager__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.role-manager__back-link {
+    color: var(--brand-green);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.role-manager__title {
+    color: var(--brand-green);
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+/* Contenedor Verde */
+.role-manager__content {
+    background-color: var(--brand-green);
+    padding: 40px 40px;
+    border-radius: 10px;
+}
+
+/* Lista de Solicitudes */
+.request-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjeta Individual */
+.request-item {
+    background-color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Móvil: Apilado */
+    gap: 15px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.request-item__user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.request-item__avatar {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.request-item__name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.request-item__type {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Botones */
+.request-item__actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.2s;
+}
+
+.btn--accept { background-color: var(--action-green); }
+.btn--reject { background-color: var(--action-red); }
+
+.btn:hover { opacity: 0.55; }
+
+/* Desktop: Ajuste a fila horizontal */
+@media (min-width: 768px) {
+    .request-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .request-item__actions {
+        width: auto;
+    }
+
+    .btn {
+        min-width: 130px;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="record.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Document</title>
+</head>
+<body>
+  <main class="register-page">
+        <!-- Encabezado con Logo -->
+        <header class="register-page__header">
+            <h1 class="register-page__title">Registro</h1>
+            <div class="register-page__logo-container">
+                <img src="img/logo_paujil.png" alt="Logo El Paujil" class="register-page__logo">
+            </div>
+        </header>
+
+        <!-- Tarjeta del Formulario -->
+        <section class="register-page__card">
+            <form action="#" class="register-form">
+                
+                <div class="register-form__field">
+                    <i class='bx bxs-user register-form__icon'></i>
+                    <input type="text" placeholder="Nombre / Apellido" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__field">
+                    <i class='bx bxs-envelope register-form__icon'></i>
+                    <input type="email" placeholder="Correo electrónico" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__field">
+                    <i class='bx bxs-lock-alt register-form__icon'></i>
+                    <input type="password" placeholder="Contraseña" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__field">
+                    <i class='bx bxs-lock register-form__icon'></i>
+                    <input type="password" placeholder="Confirmar contraseña" class="register-form__input" required>
+                </div>
+
+                <div class="register-form__field">
+                    <i class='bx bxs-phone register-form__icon'></i>
+                    <input type="tel" placeholder="Número de teléfono" class="register-form__input" required>
+                </div>
+
+                <button type="submit" class="button button--submit">
+                    Registrarse
+                </button>
+
+                <div class="register-form__footer">
+                    <p class="register-form__text">¿Ya tienes cuenta? <a href="#" class="register-form__link">Inicia sesión</a></p>
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+</html>

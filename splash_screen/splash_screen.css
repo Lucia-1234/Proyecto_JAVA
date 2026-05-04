@@ -1,0 +1,52 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores extraídos del diseño */
+    --splash-gradient: linear-gradient(to bottom, #a34fc3 0%, #76d376 100%);
+    --text-light: #ffffff;
+}
+
+/* Bloque Principal */
+.splash-screen {
+    width: 100%;
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background: var(--splash-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de elementos */
+.splash-screen__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out; /* Opcional: animación de entrada */
+}
+
+/* Elemento Logo */
+.splash-screen__logo {
+    max-width: 200px; /* Tamaño responsivo */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .splash-screen__logo {
+        max-width: 90px;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rol.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="role-manager">
+        <!-- Encabezado con botón de regreso -->
+        <header class="role-manager__header">
+            <a href="#" class="role-manager__back-link" aria-label="Volver">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </a>
+            <h1 class="role-manager__title">Asignar rol</h1>
+        </header>
+
+        <!-- Contenedor verde de solicitudes -->
+        <section class="role-manager__content">
+            <ul class="request-list">
+                
+                <!-- Item 1 -->
+                <li class="request-item">
+                    <div class="request-item__user-info">
+                        <div class="request-item__avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="request-item__details">
+                            <h2 class="request-item__name">Juan Enrique Perex would</h2>
+                            <p class="request-item__type">Solicitud: <span class="request-item__role">Trabajador</span></p>
+                        </div>
+                    </div>
+                    <div class="request-item__actions">
+                        <button class="btn btn--accept">Aceptar</button>
+                        <button class="btn btn--reject">Negar</button>
+                    </div>
+                </li>
+
+                <!-- Item 2 -->
+                <li class="request-item">
+                    <div class="request-item__user-info">
+                        <div class="request-item__avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="request-item__details">
+                            <h2 class="request-item__name">Leydi Maria Sacramentos Lopez</h2>
+                            <p class="request-item__type">Solicitud: <span class="request-item__role">Visitante</span></p>
+                        </div>
+                    </div>
+                    <div class="request-item__actions">
+                        <button class="btn btn--accept">Aceptar</button>
+                        <button class="btn btn--reject">Negar</button>
+                    </div>
+                </li>
+
+                <!-- Item 3 -->
+                <li class="request-item">
+                    <div class="request-item__user-info">
+                        <div class="request-item__avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="request-item__details">
+                            <h2 class="request-item__name">Carlos Marin Cortez</h2>
+                            <p class="request-item__type">Solicitud: <span class="request-item__role">Visitante</span></p>
+                        </div>
+                    </div>
+                    <div class="request-item__actions">
+                        <button class="btn btn--accept">Aceptar</button>
+                        <button class="btn btn--reject">Negar</button>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

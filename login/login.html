@@ -4,9 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <title>Document</title>
 </head>
 <body>
-  
+  <main class="login-screen">
+        
+        <!-- SECCIÓN IZQUIERDA: Galería Mosaico de Moras -->
+        <section class="login-screen__gallery">
+            <img src="img/uno.jpeg" class="login-screen__photo">
+            <img src="img/dos.jpeg" class="login-screen__photo">
+            <img src="img/tres.jpeg" class="login-screen__photo">
+            <img src="img/cuatro.jpeg" class="login-screen__photo">
+            <img src="img/cinco.jpeg" class="login-screen__photo">
+        </section>
+
+        <!-- SECCIÓN DERECHA: Formulario de Login con Degradado -->
+        <section class="login-screen__content">
+            
+            <header class="login-screen__header">
+                <h1 class="login-screen__title">¡Bienvenido!</h1>
+            </header>
+
+            <div class="login-screen__avatar-container">
+                <!-- Imagen 9: Avatar Vector (image_18.png) -->
+                <img src="img/Vector.png" alt="Icono de perfil de usuario" class="login-screen__avatar">
+            </div>
+
+            <form action="#" class="login-screen__form login-form">
+                
+                <div class="login-form__field">
+                    <span class="login-form__icon-wrapper">
+                        <!-- Icono de usuario: Imagen o FontAwesome -->
+                        <i class="fa-solid fa-user login-form__icon"></i>
+                    </span>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" class="login-form__input" required>
+                </div>
+
+                <div class="login-form__field">
+                    <span class="login-form__icon-wrapper">
+                        <!-- Icono de candado: Imagen o FontAwesome -->
+                        <i class="fa-solid fa-lock login-form__icon"></i>
+                    </span>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" class="login-form__input" required>
+                </div>
+
+                <button type="submit" class="login-form__button">
+                    Ingresar
+                </button>
+
+            </form>
+
+        </section>
+    </main>
 </body>
 </html>
