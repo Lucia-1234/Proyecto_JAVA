@@ -1,85 +1,118 @@
-*{
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
-    --color_fondo: #6dbf4b; /* verde suave */
-    --color-morado: #b04bc6;
-    --color_principal: #2F4F4F; /* verde oscuro elegante */
-    --color_secundario: #ffffff; /* blanco */
-    --color_boton: #4CAF50; /* verde vibrante */
-    --color_boton_hover: #45a049;
-    --fuente_principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --gradient-start: #a34fc3;
+    --gradient-end: #76d376;
+    --black: #000000;
+    --white: #ffffff;
 }
 
-body {
-    font-family: var(--fuente_principal);
-    background: linear-gradient(
-    to bottom,
-    var(--color_fondo),
-    var(--color-morado)
-  );
+/* Bloque Principal */
+.welcome-screen {
+    display: flex;
+    flex-direction: column; /* Móvil primero */
+    min-height: 100vh;
+}
+
+/* Lado del Banner (Gradiente) */
+.welcome-screen__banner {
+    flex: 1;
+    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 2rem;
 }
 
-.Pagina_inicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.welcome-screen__logo-container {
     text-align: center;
-    background: var(--color_secundario);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    max-width: 600px;
 }
 
-.Pagina_inicio__bienvenida {
-    color: var(--color_principal);
-    font-size: 2rem;
-    margin-bottom: 20px;
+.welcome-screen__logo {
+    max-width: 150px;
+    height: auto;
 }
 
-.Pagina_inicio__logo {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
 
-.Pagina_inicio__ingreso {
+/* Lado del Contenido (Blanco) */
+.welcome-screen__content {
+    flex: 1;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.welcome-screen__title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+/* Navegación y Botones */
+.welcome-screen__list {
+    list-style: none;
     width: 100%;
+    max-width: 300px;
 }
 
-.Pagina_inicio__texto {
-    font-size: 1.2rem;
-    color: var(--color_principal);
-    margin-bottom: 10px;
+.welcome-screen__item {
+    margin-bottom: 1.2rem;
 }
 
-.Pagina_inicio__boton {
-    background-color: var(--color_boton);
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.Pagina_inicio__boton .Pagina_inicio__enlace{
+.button {
+    display: block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
-    color: var(--color_secundario);
-    font-weight: bold;
-    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.Pagina_inicio__boton:hover {
-    background-color: var(--color_boton_hover);
+.button--primary {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.button--primary:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+.welcome-screen__footer {
+    margin-top: 2rem;
+}
+
+.welcome-screen__link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.welcome-screen__link:hover {
+    text-decoration: underline;
+}
+
+/* Media Query para Escritorio */
+@media (min-width: 768px) {
+    .welcome-screen {
+        flex-direction: row; /* Cambio a dos columnas */
+    }
+
+    .welcome-screen__banner, 
+    .welcome-screen__content {
+        height: 100vh;
+    }
+
+    .welcome-screen__logo {
+        max-width: 300px;
+    }
 }
