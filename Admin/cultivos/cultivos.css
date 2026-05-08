@@ -1,0 +1,165 @@
+:root {
+    --primary-green: #28a745;
+    --dark-green: #1e7e34;
+    --light-green: #82e0aa;
+    --danger-red: #ff0000;
+    --bg-green: #21a43d;
+    --white: #ffffff;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    padding: 20px;
+}
+
+/* Header */
+.header__back-btn {
+    background: none;
+    border: none;
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor Principal */
+.container {
+    background-color: var(--bg-green);
+    padding: 40px 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Lista de Cultivos */
+.crop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjeta (Block) */
+.crop-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Elementos de la Tarjeta */
+.crop-card__image-container {
+    flex: 0 0 200px;
+}
+
+.crop-card__img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.crop-card__content {
+    flex: 1;
+}
+
+.crop-card__title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.crop-card__description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.crop-card__info p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Botones (Block y Modifiers) */
+.crop-card__actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Alineación de iconos dentro de botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Estilo específico para el botón "Agregar cultivo" (el verde claro) */
+.btn--new {
+    background-color: var(--light-green); /* Verde claro del diseño */
+    color: var(--white);
+    border-radius: 25px; /* Más redondeado como en la imagen */
+    padding: 10px 20px;
+}
+
+.btn--new i {
+    font-size: 1.2rem;
+}
+
+/* Icono de volver en el header */
+.header__back-btn  {
+    font-size: 1.4rem;
+    color: var(--primary-green);
+}
+
+/* Efecto hover general para los botones */
+.btn:hover {
+    filter: brightness(0.9);
+    transform: translateY(-1px);
+}
+
+.btn--add { background-color: var(--primary-green); color: white; }
+.btn--edit { background-color: var(--primary-green); color: white; }
+.btn--delete { background-color: var(--danger-red); color: white; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .crop-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .crop-card__image-container {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .crop-card__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
