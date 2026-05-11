@@ -1,13 +1,4 @@
-:root {
-    --primary-green: #28a745;
-    --dark-green: #1e7e34;
-    --light-green: #82e0aa;
-    --danger-red: #ff0000;
-    --bg-green: #21a43d;
-    --white: #ffffff;
-    --text-color: #333;
-}
-
+@import "../../styles.css";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -139,7 +130,7 @@ body {
 
 .btn--add { background-color: var(--primary-green); color: white; }
 .btn--edit { background-color: var(--primary-green); color: white; }
-.btn--delete { background-color: var(--danger-red); color: white; }
+.btn--delete { background-color: var(--action-red); color: white; }
 
 /* --- RESPONSIVO --- */
 @media (max-width: 768px) {

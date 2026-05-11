@@ -1,10 +1,4 @@
-:root {
-    --brand-green: #28a745;       /* Fondo principal */
-    --action-green: #1d9b3e;      /* Botón aceptar */
-    --action-red: #ff0000;        /* Botón negar */
-    --text-dark: #333;
-    --white: #ffffff;
-}
+@import "../../styles.css";
 
 * {
     margin: 0;

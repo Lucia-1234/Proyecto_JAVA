@@ -6,9 +6,8 @@
     --splash-gradient: linear-gradient(to bottom, #a34fc3 0%, #76d376 100%);
     --bg-purple: #b352cc; /* Color aproximado de la imagen */
     --card-purple: #a646c0; /* Un tono ligeramente diferente para la tarjeta */
-    --input-bg: #f0e1f5; /* Tono lila muy claro para los campos */
+    --input-bg-lila: #f0e1f5; /* Tono lila muy claro para los campos */
     --text-placeholder: #7a7a7a;
-    --text-color: #ffffff;
     --input-bg: rgba(255, 255, 255, 0.2);
     --input-placeholder: #555;
     --brand-green: #28a745;       /* Fondo principal */
@@ -18,5 +17,6 @@
     --dark-green: #1e7e34;
     --light-green: #82e0aa;
     --bg-green: #21a43d;
-    --text-color: #333;
+    --text-dark: #333;
+    --bg-light: #f4f4f4;
 }

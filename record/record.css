@@ -1,17 +1,11 @@
+@import "../styles.css";
+
 /* Reset y variables */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
-}
-
-:root {
-    --bg-purple: #b352cc; /* Color aproximado de la imagen */
-    --card-purple: #a646c0; /* Un tono ligeramente diferente para la tarjeta */
-    --input-bg: #f0e1f5; /* Tono lila muy claro para los campos */
-    --text-placeholder: #7a7a7a;
-    --white: #ffffff;
 }
 
 /* Contenedor Principal */
@@ -65,7 +59,7 @@
 }
 
 .register-form__field {
-    background-color: var(--input-bg);
+    background-color: var(--input-bg-lila);
     display: flex;
     align-items: center;
     padding: 0 1.5rem;

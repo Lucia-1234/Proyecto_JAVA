@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="biopreparados.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="bioprep">
+    <header class="bioprep__header">
+        <button class="bioprep__back-btn" aria-label="Volver">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h1 class="bioprep__title">Biopreparados</h1>
+    </header>
+
+    <section class="bioprep__main-container">
+        
+        <article class="recipe-card">
+            <span class="recipe-card__number">01</span>
+            <h2 class="recipe-card__title">Caldo bordeles</h2>
+            <p class="recipe-card__desc">
+                El caldo bordelés es un fungicida y bactericida preventivo, utilizado principalmente para controlar enfermedades fúngicas como el mildiu, roya y antracnosis en cultivos y árboles frutales.
+            </p>
+
+            <table class="recipe-card__table">
+                <thead>
+                    <tr>
+                        <th>Ingrediente</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cal hidratada</td><td>2 kg</td></tr>
+                    <tr><td>Sulfato de cobre</td><td>700 gr</td></tr>
+                </tbody>
+            </table>
+
+            <div class="recipe-card__prep">
+                <strong>Preparacion:</strong>
+                <p>Se hace la disolucion de la cal y sulfato en agua con un choque termico para diluir en la caneca</p>
+            </div>
+
+            <div class="recipe-card__actions">
+                <button class="btn btn--edit">editar</button>
+                <button class="btn btn--delete">eliminar</button>
+            </div>
+        </article>
+
+        <article class="recipe-card">
+            <span class="recipe-card__number">02</span>
+            <h2 class="recipe-card__title">Caldo visoza</h2>
+            <p class="recipe-card__desc">
+                El caldo Visosa es un biofungicida y biofertilizante mineral utilizado en agricultura orgánica y agroecología para prevenir y combatir enfermedades fúngicas...
+            </p>
+
+            <table class="recipe-card__table">
+                <thead>
+                    <tr>
+                        <th>Ingrediente</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cal hidratada</td><td>2 kg</td></tr>
+                    <tr><td>Sulfato de cobre</td><td>300 gr</td></tr>
+                    <tr><td>Sulfato de zinc</td><td>100 gr</td></tr>
+                    </tbody>
+            </table>
+
+            <div class="recipe-card__prep">
+                <strong>Preparacion:</strong>
+                <p>Se hace la disolucion de la cal y sulfato en agua con un choque termico y se van añadiendo los elementos menores...</p>
+            </div>
+
+            <div class="recipe-card__actions">
+                <button class="btn btn--edit">editar</button>
+                <button class="btn btn--delete">eliminar</button>
+            </div>
+        </article>
+
+        <div class="bioprep__footer">
+            <button class="btn-add">
+                <i class="fa-regular fa-plus-square"></i> Agregar biopreparado
+            </button>
+        </div>
+    </section>
+</main>
+</body>
+</html>

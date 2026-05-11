@@ -1,16 +1,11 @@
+@import "../styles.css";
+
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root {
-    --gradient-start: #a34fc3;
-    --gradient-end: #76d376;
-    --black: #000000;
-    --white: #ffffff;
 }
 
 /* Bloque Principal */
@@ -23,7 +18,7 @@
 /* Lado del Banner (Gradiente) */
 .welcome-screen__banner {
     flex: 1;
-    background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-green));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +78,7 @@
 }
 
 .button--primary:hover {
-    background-color: #333;
+    background-color: var(--text-dark);
     transform: scale(1.02);
 }
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="admin_users.css">
+  <title>Administracion de Usuarios</title>
+</head>
+<body class="page">
+    <main class="admin-container">
+        <header class="admin-header">
+            <a href="#" class="admin-header__back" aria-label="Volver">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </a>
+            <h1 class="admin-header__title">Administrar usuarios</h1>
+        </header>
+
+        <section class="table-wrapper">
+            <table class="user-table">
+                <thead class="user-table__head">
+                    <tr>
+                        <th class="user-table__th">ID</th>
+                        <th class="user-table__th">NOMBRE DE USUARIO</th>
+                        <th class="user-table__th">ROL</th>
+                        <th class="user-table__th">ESTADO</th>
+                        <th class="user-table__th"></th> </tr>
+                </thead>
+                <tbody class="user-table__body">
+                    <tr class="user-table__row">
+                        <td class="user-table__td">01</td>
+                        <td class="user-table__td">Juan Andres Felipe Perez</td>
+                        <td class="user-table__td">Trabajador</td>
+                        <td class="user-table__td">Activo</td>
+                        <td class="user-table__td user-table__td--actions">
+                            <td class="user-table__td user-table__td--actions">
+                            <button class="btn btn--delete">
+                                <i class="fa-solid fa-xmark btn__icon btn__icon--delete"></i> Eliminar
+                            </button>
+                            <button class="btn btn--edit">
+                                <i class="fa-solid fa-pen btn__icon btn__icon--edit"></i> Editar
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

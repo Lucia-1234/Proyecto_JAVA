@@ -1,14 +1,10 @@
+@import "../styles.css";
+
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    /* Colores extraídos del diseño */
-    --splash-gradient: linear-gradient(to bottom, #a34fc3 0%, #76d376 100%);
-    --text-light: #ffffff;
 }
 
 /* Bloque Principal */

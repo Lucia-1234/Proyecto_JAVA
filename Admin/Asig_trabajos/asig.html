@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="asig.css">
+  <title>Document</title>
+</head>
+<body>
+  <main class="container">
+        <header class="header">
+            <button class="header__back-btn" aria-label="Volver">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h1 class="header__title">Asignar trabajos</h1>
+        </header>
+
+        <section class="assignment-card">
+            <form class="form">
+                <div class="form__group">
+                    <label class="form__label" for="job-name">Nombre del trabajo:</label>
+                    <input class="form__input" type="text" id="job-name" placeholder="Ej: Fumigación con plaguicidas">
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="job-desc">Descripción del trabajo:</label>
+                    <textarea class="form__input form__input--textarea" id="job-desc"></textarea>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="crop">Cultivo:</label>
+                    <select class="form__input form__input--select" id="crop">
+                        <option value="">SELECCIONAR</option>
+                        <option value="maiz">Maíz</option>
+                        <option value="trigo">Trigo</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="assign-date">Fecha de asignación:</label>
+                    <input class="form__input" type="date" id="assign-date">
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="worker-id">ID del trabajador:</label>
+                    <input class="form__input" type="text" id="worker-id">
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="start-date">Fecha de inicio:</label>
+                    <input class="form__input" type="date" id="start-date">
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="end-date">Fecha de finalización:</label>
+                    <input class="form__input" type="date" id="end-date">
+                </div>
+
+                <div class="form__actions">
+                    <button type="submit" class="form__button">Guardar trabajo</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+:root {
+    --green-theme: #28a745;
+    --red-btn: #ff0000;
+    --white: #ffffff;
+}
+
+/* Reset y control de Scroll */
+* { box-sizing: border-box; }
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Evita el scroll de toda la pantalla */
+    font-family: sans-serif;
+}
+
+.bioprep {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+.bioprep__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--green-theme);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bioprep__back-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Área Verde con Scroll Interno */
+.bioprep__main-container {
+    background-color: var(--green-theme);
+    flex: 1;
+    border-radius: 10px;
+    padding: 30px;
+    overflow-y: auto; /* Aquí sucede la magia del scroll */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjeta Estilo Vertical */
+.recipe-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.recipe-card__number {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.recipe-card__title {
+    margin: 0 0 15px 0;
+    font-size: 1.8rem;
+}
+
+.recipe-card__desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Tabla compacta y centrada */
+.recipe-card__table {
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    width: 300px;
+}
+
+.recipe-card__table th, .recipe-card__table td {
+    border: 1px solid #999;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+
+.recipe-card__prep {
+    text-align: left;
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+}
+
+/* Botones de acción (separados) */
+.recipe-card__actions {
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio automáticamente */
+    align-items: center;
+    gap: 20px; /* Espacio mínimo entre ellos */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;          /* Permite que crezcan igual */
+    max-width: 160px; /* Pero con un límite para que no sean gigantes */
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto "editar" se parta en dos líneas */
+}
+
+.btn--edit { background-color: var(--green-theme); }
+.btn--delete { background-color: var(--red-btn); }
+
+/* Botón inferior derecho */
+.bioprep__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-add {
+    background: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .recipe-card__actions {
+        flex-direction: column; /* Se apilan verticalmente */
+        gap: 10px;             /* Menos espacio entre ellos */
+    }
+
+    .btn {
+        max-width: 100%;       /* En móvil ocupan todo el ancho disponible */
+        width: 100%;
+    }
+
+    .recipe-card {
+        padding: 20px;         /* Reducimos el padding de la tarjeta en móvil */
+    }
+}

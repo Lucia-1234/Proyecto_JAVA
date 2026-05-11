@@ -1,0 +1,123 @@
+/* Variables para mantener consistencia */
+:root {
+    --primary-green: #28a745; /* Verde del fondo */
+    --light-green: #c3e6cb;   /* Verde de los inputs */
+    --dark-text: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Bloque Header */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--primary-green);
+}
+
+.header__back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    margin-right: 15px;
+}
+
+.header__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Bloque Card */
+.assignment-card {
+    background-color: var(--primary-green);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Bloque Formulario */
+.form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.form__group {
+    display: grid;
+    grid-template-columns: 180px 1fr; /* Alineación etiquetas e inputs */
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.form__label {
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.form__input {
+    background-color: var(--light-green);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Modificadores BEM */
+.form__input--textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form__input--select {
+    cursor: pointer;
+    appearance: none; /* Quitar estilo nativo si se desea personalizar más */
+}
+
+/* Botón */
+.form__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.form__button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.form__button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Responsividad básica */
+@media (max-width: 600px) {
+    .form__group {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,132 @@
+:root {
+    --green-bg: #28a745;
+    --purple-main: #9124be;
+    --red-main: #ff0000;
+    --border-light: #d8b4fe; /* Morado claro para los bordes internos */
+}
+
+/* Reset y Layout para evitar scroll global */
+* { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+.work-management {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+}
+
+.work-management__header {
+    max-width: 1000px;
+    margin: 0 auto 20px auto; /* Lo alineamos con el contenedor verde */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Título en verde como en las pantallas anteriores */
+.work-management__title {
+    color: var(--green-bg);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.work-management__back-btn {
+    color: var(--green-bg);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Contenedor Verde con scroll interno */
+.work-management__container {
+    background-color: var(--green-bg);
+    flex: 1;
+    border-radius: 12px;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjeta Blanca */
+.job-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.job-card__title {
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+}
+
+.job-card__description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Grilla de Detalles (3 columnas) */
+.job-card__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border-light);
+    margin-bottom: 20px;
+}
+
+.job-card__item {
+    border: 0.5px solid var(--border-light);
+    padding: 10px;
+    font-size: 0.8rem;
+    min-height: 40px;
+}
+
+/* Botones alineados a la derecha */
+.job-card__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 130px;
+    transition: opacity 0.2s;
+}
+
+.btn--edit { background-color: var(--purple-main); }
+.btn--delete { background-color: var(--red-main); }
+
+.btn:hover { opacity: 0.9; }
+
+/* Responsividad para la tabla interna */
+@media (max-width: 768px) {
+    .job-card__details {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+    
+    .job-card__actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
